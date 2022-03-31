@@ -1,16 +1,13 @@
 package by.itstep.tiknyus.examproject.model.entity;
 
+import by.itstep.tiknyus.examproject.model.entity.abstracts.Product;
 import by.itstep.tiknyus.examproject.model.exception.ProductIndexOutOfBoundException;
 
 public class Basket {
-    private Orange[] oranges;
-    private Milk[] milk;
-    private Bread[] breads;
+    private Product[] products;
 
     public Basket() {
-        oranges = new Orange[0];
-        milk = new Milk[0];
-        breads = new Bread[0];
+        products = new Product[0];
     }
 
     public Basket(Orange[] oranges, Milk[] milk, Bread[] breads) {

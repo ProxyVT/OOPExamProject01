@@ -1,6 +1,8 @@
 package by.itstep.tiknyus.examproject.model.entity;
 
-public class Orange {
+import by.itstep.tiknyus.examproject.model.entity.abstracts.Product;
+
+public class Orange extends Product {
     private int diameter;
     private int vitaminC;
     private double coast;
@@ -8,10 +10,10 @@ public class Orange {
     public Orange() {
     }
 
-    public Orange(int diameter, int vitaminC, double coast) {
+    public Orange(int diameter, int vitaminC, double price) {
+        super(price);
         this.diameter = diameter;
         this.vitaminC = vitaminC;
-        this.coast = coast;
     }
 
     public int getDiameter() {
@@ -27,20 +29,9 @@ public class Orange {
     }
 
     public void setVitaminC(int vitaminC) {
-        if(vitaminC > 0) {
+        if (vitaminC > 0) {
             this.vitaminC = vitaminC;
         }
-    }
-
-    public double getCoast() {
-        return coast;
-    }
-
-    public void setCoast(double coast) {
-        if(coast > 0){
-            this.coast = coast;
-        }
-        this.coast = coast;
     }
 
     @Override
@@ -48,7 +39,7 @@ public class Orange {
         return "Orange{" +
                 "diameter=" + diameter +
                 ", vitaminC =" + vitaminC +
-                ", coast=" + coast +
+                ", coast=" + super.toString() +
                 '}';
     }
 }
